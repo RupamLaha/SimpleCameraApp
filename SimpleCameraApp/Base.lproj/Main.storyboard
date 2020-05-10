@@ -22,10 +22,11 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7J-BM-0Cp">
-                                <rect key="frame" x="137" y="724" width="140" height="44"/>
+                                <rect key="frame" x="224" y="768" width="170" height="44"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="S7J-BM-0Cp" secondAttribute="height" multiplier="35:11" id="AQu-p4-1OM"/>
+                                    <constraint firstAttribute="width" constant="170" id="RXx-gL-d9n"/>
+                                    <constraint firstAttribute="height" constant="44" id="iYq-Ox-9he"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal">
@@ -41,30 +42,72 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Picture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsm-3P-6ox">
-                                <rect key="frame" x="152.5" y="735.5" width="109.5" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Fsm-3P-6ox" secondAttribute="height" multiplier="109:21" id="FiN-Jb-6ga"/>
-                                </constraints>
+                                <rect key="frame" x="254.5" y="779.5" width="109.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IlD-Qv-9qv">
+                                <rect key="frame" x="20" y="768" width="170" height="44"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="b8y-zd-eSo"/>
+                                    <constraint firstAttribute="height" constant="44" id="oCD-Qh-p3H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fromGelleryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1rh-HN-ADP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From gallery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8d-tn-d7I">
+                                <rect key="frame" x="50.5" y="779" width="109" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0E-dq-nPj">
+                                <rect key="frame" x="144" y="712" width="126" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="a6v-SF-gxo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Remove Photo"/>
+                                <connections>
+                                    <action selector="removePhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TdR-KR-fGC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="S7J-BM-0Cp" firstAttribute="top" secondItem="E0E-dq-nPj" secondAttribute="bottom" constant="20" id="5k4-hc-XFa"/>
+                            <constraint firstItem="S7J-BM-0Cp" firstAttribute="leading" secondItem="IlD-Qv-9qv" secondAttribute="trailing" constant="34" id="5tD-yT-Qol"/>
+                            <constraint firstItem="J8d-tn-d7I" firstAttribute="centerY" secondItem="IlD-Qv-9qv" secondAttribute="centerY" id="FuV-s7-CnT"/>
                             <constraint firstItem="oTE-mj-vjv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FuZ-2M-bLW"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S7J-BM-0Cp" secondAttribute="bottom" constant="94" id="GrR-cB-8gD"/>
                             <constraint firstItem="oTE-mj-vjv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KzG-5j-CC7"/>
-                            <constraint firstItem="Fsm-3P-6ox" firstAttribute="centerX" secondItem="S7J-BM-0Cp" secondAttribute="centerX" id="Nx6-1V-c2f"/>
-                            <constraint firstItem="S7J-BM-0Cp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P51-Hr-fI3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S7J-BM-0Cp" secondAttribute="trailing" constant="20" id="TcL-Qr-P2J"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IlD-Qv-9qv" secondAttribute="bottom" constant="50" id="Yvk-3e-1hc"/>
+                            <constraint firstItem="Fsm-3P-6ox" firstAttribute="centerX" secondItem="S7J-BM-0Cp" secondAttribute="centerX" id="beF-1U-Tf7"/>
+                            <constraint firstItem="E0E-dq-nPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g0z-B0-RIw"/>
+                            <constraint firstItem="Fsm-3P-6ox" firstAttribute="centerY" secondItem="S7J-BM-0Cp" secondAttribute="centerY" id="g8m-PN-PPv"/>
+                            <constraint firstItem="IlD-Qv-9qv" firstAttribute="bottom" secondItem="S7J-BM-0Cp" secondAttribute="bottom" id="sjA-Va-MNH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oTE-mj-vjv" secondAttribute="trailing" constant="20" id="ukG-wU-AgE"/>
-                            <constraint firstItem="Fsm-3P-6ox" firstAttribute="centerY" secondItem="S7J-BM-0Cp" secondAttribute="centerY" id="xZE-L3-oDg"/>
+                            <constraint firstItem="J8d-tn-d7I" firstAttribute="centerX" secondItem="IlD-Qv-9qv" secondAttribute="centerX" id="xbp-Ez-MT8"/>
                             <constraint firstItem="oTE-mj-vjv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="ybq-VL-ggt"/>
+                            <constraint firstItem="IlD-Qv-9qv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yem-ay-Wml"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="image" destination="oTE-mj-vjv" id="cME-JK-XO2"/>
+                        <outlet property="removePhoto" destination="E0E-dq-nPj" id="j7j-OP-dJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
